@@ -48,35 +48,20 @@
             ></textarea> 
         </div>
 
-
-
-
-
-
         <div class="Form" id="rmt">
             <label for="ReachAtField"> Reach me at links</label> 
             <input
             type="text"
-            class="ReachAtField "
-            id="rmtf";
+            class="ReachAtField"
             placeholder="One link at a time"
             />
             
         </div>
         <div class="addMore">
-            <button onclick="addReach()" id="ReachAtField-add">Add more</button>
+            <button onclick="addIP('rmt','input')" id="ReachAtField-add">Add more</button>
        </div>
 
-
-
-
-
-
-
-
-
-
-        <div class="Form">
+        <div class="Form" id='ExpField'>
             <p>Experience</p>
             <label for="OrganizationField"> Organization</label> 
             <input
@@ -92,22 +77,22 @@
             />
             <label for="StartDateField"> Start date </label> 
             <input
-            type="date"
+            type="month"
             id="StartDateField"
             placeholder="Enter here"
             />
             <label for="EndDateField"> End date </label> 
             <input
-            type="date"
+            type="month"
             id="EndDateField"
             placeholder="Enter here"
-            />
-            <div class="addMore">
-                <button class="ExpField-add">Add more</button>
-            </div>
+            /> 
+        </div>
+        <div class="addMore">
+            <button onclick="addExp()"class="ExpField-add">Add more</button>
         </div>
 
-        <div class="Form">
+        <div class="Form" id="ProjField">
             <p>Projects</p>
             <label for="ProjectNameField"> Project Name</label> 
             <input
@@ -126,23 +111,23 @@
             id="ProjectDescField"
             placeholder="Write in short"
             ></textarea> 
-            <div class="addMore">
-                 <button class="ProjectField-add">Add more</button>
-            </div>
         </div>
+        <div class="addMore">
+            <button onclick="addProj()" class="ProjectField-add">Add more</button>
+       </div>
 
-        <div class="Form">
+        <div class="Form"  id="AchieveField">
             <label for="AchieveField">Achievements</label>
             <textarea
-            id="AchieveField"
+           
             placeholder="Write in short"
-            ></textarea> 
-            <div class="addMore">
-                 <button class="AchieveField-add">Add more</button>
-            </div>
+            ></textarea>   
         </div>
+        <div class="addMore">
+            <button onclick="addIP('AchieveField','textarea')"class="AchieveField-add">Add more</button>
+       </div>
 
-        <div class="Form">
+        <div class="Form" id="EduField">
             <p>Eduation</p>
             <label for="InstuField"> Institute</label> 
             <input
@@ -152,28 +137,28 @@
             />
             <label for="InstuFromField"> From </label> 
             <input
-            type="date"
+            type="month"
             id="InstuFromField"
             placeholder="Enter here"
             />
             <label for="InstuToField">To</label> 
             <input
-            type="date"
+            type="month"
             id="InstuToField"
             placeholder="Enter here"
             />
-            <label for="InstuScoreField">To</label> 
+            <label for="InstuScoreField">CGPA / Percentage</label> 
             <input
-            type=""
-            id="InstuToField"
+            type="number"
+            id="InstuScoreField"
             placeholder="Enter here"
             />
-            <div class="addMore">
-                <button class="ExpField-add">Add more</button>
-            </div>
+        </div>
+        <div class="addMore">
+            <button onClick="addEdu()"class="InstuField-add">Add more</button>
         </div>
 
-        <div class="Form">
+        <div class="Form" id="TechField">
             <p>Technical skills</p>
             <label for="DomainField">Domain</label>
             <input
@@ -187,52 +172,45 @@
             id="SkillsField"
             placeholder="Enter here"
             />
-            <button class="SkillsField-add">Add Skills</button>
-            <div class="addMore">
-                <button class="DomainField-add">Add domain</button>
-            </div>
+        </div>
+        <div class="addMore">
+            <button  onclick="addDomain()" class="DomainField-add">Add domain</button>
         </div>
 
-        <div class="Form">
+        <div class="Form"  id="ProfilesField">
             <label for="ProfilesField"> Important profiles</label> 
             <input
             type="text"
-            id="ProfilesField"
             placeholder="One link at a time"
-            />
-            <div class="addMore">
-                 <button class="ProfilesField-add">Add more</button>
-            </div>
+            /> 
         </div>
+        <div class="addMore">
+            <button onclick="addIP('ProfilesField','input')" class="ProfilesField-add">Add more</button>
+       </div>
 
-        <div class="Form">
+        <div class="Form"   id="CWField">
             <label for="CWField"> CourseWork</label> 
             <input
             type="text"
-            id="CWField"
             placeholder="Enter here"
-            />
-            <div class="addMore">
-                 <button class="CWField-add">Add more</button>
-            </div>
+            /> 
         </div>
+        <div class="addMore">
+            <button onclick="addIP('CWField','input')" class="CWField-add">Add more</button>
+       </div>
 
-        <div class="Form">
+
+
+        <div class="Form" id="InterestsField">
             <label for="InterestsField"> Interests</label> 
             <input
             type="text"
-            id="InterestsField"
             placeholder="Enter here"
             />
-            <div class="addMore">
-                 <button class="InterestsField-add">Add more</button>
-            </div>
         </div>
-
-
-
-
-
+        <div class="addMore">
+            <button onclick="addIP('InterestsField','input')" class="InterestsField-add">Add more</button>
+       </div>
 
 
     </div>
