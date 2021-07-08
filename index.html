@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html   lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="script.js"></script>
+    <title>Resume Builder</title>
+</head>
+<body>
+    <header>
+       <nav class="navbar">
+           <ul class="nav-list">
+               <li><a href="#Home">Home</a></li>
+               <li><a href="#About-us">About Us</a></li>
+               <li><a href="#Build-now">Build Now</a></li>
+           </ul>
+       </nav>
+       <h1> Your Resume</h1>
+       <h1> Defines YOU</h1>
+       <p> Having trouble in what to add & how to arrange your resume ? We are here to help you out! </p>
+       <button class="btn1"> Create Now </button>
+    </header>
+    <div id="About-us">
+        <h1> About US</h1>
+        <p> 
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae amet dolor nemo asperiores optio facilis magnam nesciunt molestiae velit accusamus voluptatum, consequatur exercitationem nisi maiores quaerat enim soluta cupiditate dolore!
+        </p>
+    </div>
+
+    <div class="Resume-form"> 
+        <h1> Build your Resume now</h1>
+        <h2>Fill your details</h2>
+        <div class="Form">
+            <label for="NameField">Your Name</label>
+            <input 
+            type="text"
+            id="NameField"
+            placeholder="Enter here"
+            />   
+        </div>
+
+        <div class="Form">
+            <label for="AboutField">About yourself</label>
+            <textarea
+            class="AboutField"
+            placeholder="Write in short"
+            ></textarea> 
+        </div>
+
+
+
+
+
+
+        <div class="Form" id="rmt">
+            <label for="ReachAtField"> Reach me at links</label> 
+            <input
+            type="text"
+            class="ReachAtField "
+            id="rmtf";
+            placeholder="One link at a time"
+            />
+            
+        </div>
+        <div class="addMore">
+            <button onclick="addReach()" id="ReachAtField-add">Add more</button>
+       </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="Form">
+            <p>Experience</p>
+            <label for="OrganizationField"> Organization</label> 
+            <input
+            type="text"
+            id="OrganizationField"
+            placeholder="Enter here"
+            />
+            <label for="PostField"> Post</label> 
+            <input
+            type="text"
+            id="PostField"
+            placeholder="Enter here"
+            />
+            <label for="StartDateField"> Start date </label> 
+            <input
+            type="date"
+            id="StartDateField"
+            placeholder="Enter here"
+            />
+            <label for="EndDateField"> End date </label> 
+            <input
+            type="date"
+            id="EndDateField"
+            placeholder="Enter here"
+            />
+            <div class="addMore">
+                <button class="ExpField-add">Add more</button>
+            </div>
+        </div>
+
+        <div class="Form">
+            <p>Projects</p>
+            <label for="ProjectNameField"> Project Name</label> 
+            <input
+            type="text"
+            id="ProjectNameField"
+            placeholder="Enter here"
+            />
+            <label for="ProjectTechField"> Technologies used</label> 
+            <input
+            type="text"
+            id="ProjectTechField"
+            placeholder="Enter here"
+            />
+            <label for="ProjectDescField">Description</label>
+            <textarea
+            id="ProjectDescField"
+            placeholder="Write in short"
+            ></textarea> 
+            <div class="addMore">
+                 <button class="ProjectField-add">Add more</button>
+            </div>
+        </div>
+
+        <div class="Form">
+            <label for="AchieveField">Achievements</label>
+            <textarea
+            id="AchieveField"
+            placeholder="Write in short"
+            ></textarea> 
+            <div class="addMore">
+                 <button class="AchieveField-add">Add more</button>
+            </div>
+        </div>
+
+        <div class="Form">
+            <p>Eduation</p>
+            <label for="InstuField"> Institute</label> 
+            <input
+            type="text"
+            id="InstuField"
+            placeholder="Enter here"
+            />
+            <label for="InstuFromField"> From </label> 
+            <input
+            type="date"
+            id="InstuFromField"
+            placeholder="Enter here"
+            />
+            <label for="InstuToField">To</label> 
+            <input
+            type="date"
+            id="InstuToField"
+            placeholder="Enter here"
+            />
+            <label for="InstuScoreField">To</label> 
+            <input
+            type=""
+            id="InstuToField"
+            placeholder="Enter here"
+            />
+            <div class="addMore">
+                <button class="ExpField-add">Add more</button>
+            </div>
+        </div>
+
+        <div class="Form">
+            <p>Technical skills</p>
+            <label for="DomainField">Domain</label>
+            <input
+            type="text"
+            id="DomainField"
+            placeholder="Enter here"
+            />
+            <label for="Skillsield">Skills</label>
+            <input
+            type="text"
+            id="SkillsField"
+            placeholder="Enter here"
+            />
+            <button class="SkillsField-add">Add Skills</button>
+            <div class="addMore">
+                <button class="DomainField-add">Add domain</button>
+            </div>
+        </div>
+
+        <div class="Form">
+            <label for="ProfilesField"> Important profiles</label> 
+            <input
+            type="text"
+            id="ProfilesField"
+            placeholder="One link at a time"
+            />
+            <div class="addMore">
+                 <button class="ProfilesField-add">Add more</button>
+            </div>
+        </div>
+
+        <div class="Form">
+            <label for="CWField"> CourseWork</label> 
+            <input
+            type="text"
+            id="CWField"
+            placeholder="Enter here"
+            />
+            <div class="addMore">
+                 <button class="CWField-add">Add more</button>
+            </div>
+        </div>
+
+        <div class="Form">
+            <label for="InterestsField"> Interests</label> 
+            <input
+            type="text"
+            id="InterestsField"
+            placeholder="Enter here"
+            />
+            <div class="addMore">
+                 <button class="InterestsField-add">Add more</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>
