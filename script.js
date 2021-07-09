@@ -1,7 +1,8 @@
 function  addIP(id,inputType)
 {
 var ip = document.createElement(inputType);               
-document.getElementById(id).appendChild(ip);  
+document.getElementById(id).appendChild(ip); 
+return false; 
 }
 
 function addExp()
@@ -56,20 +57,32 @@ function addDomain()
     
 }
 
-// function change()
-// {
-//     // (document.getElementById("font_1").src="index1.html").innerHTML=(document.getElementById("NameField").src="index.html").value;
-//     window.addEventListener('load',()=>
-//     {
-//         const params=(new URL(document.location)).searchParams;
-//         const name=params.get('name');
-//         document.getElementById("font_1").innerHTML=name;
-//     })
-    
-// }
-// window.addEventListener('load',()=>
-// {
-//     const params=(new URL(document.location)).searchParams;
-//     const name=params.get('name');
-//     document.getElementById('font_1').innerHTML=name;
-// })
+function change()
+
+{
+    console.log("shownig");
+    document.getElementById("shrutiHTML").style.display="block";
+    document.getElementById("shrutiHTML").scrollIntoView();
+    document.getElementById("font_1").innerHTML=document.getElementById("NameField").value;
+    document.getElementById("font_2").innerHTML=document.getElementById("AboutField").value;
+    let rmt=document.getElementById("ReachAtField");
+    let str="";
+    for(let e of rmt){
+        str=str+ `<li> ${e.value}</li>`;
+    }
+    document.getElementById("reachT").innerHTML=str;
+    return false;
+}
+
+
+
+
+
+
+
+
+function printCV()
+{
+    document.getElementById("main").style.display="none";
+    window.print();
+}
