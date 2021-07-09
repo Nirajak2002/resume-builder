@@ -12,8 +12,15 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+.font_3
+{
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+
 body
 {
+    border: 100px black;
     /* margin: 50px; */
     text-align: justify;
     font-family: 'Open Sans', sans-serif;
@@ -21,9 +28,10 @@ body
 
 .title
 {
+    padding: 5px;
     font-weight: bold;
     font-size: 20px;
-    color: #0078ff;
+    background-color: #a9d3fa;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -38,7 +46,7 @@ body
 {
     /* margin-top: 20px;    */
     text-align:left;
-    background-color: rgb(203, 224, 250);
+    background-color: rgb(187, 214, 248);
     font-family: 'Open Sans', sans-serif;   
     padding: 20px;
 }
@@ -47,5 +55,10 @@ body
 {
     font-weight: bold;
     color: gray;
+}
+
+.box
+{
+    inline-size: 10px;
 }
 
