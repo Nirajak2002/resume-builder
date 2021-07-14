@@ -3,21 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="script.js"></script>
     <title>Resume Builder</title>
-
-    <!-- <link rel="stylesheet" type="text/css" href="design.css" media="screen"/> -->
+    <link rel="stylesheet" type="text/css" href="design.css" media="screen"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- <script src="script.js"></script>
-    <title>Index</title>
-     -->
-
-
-
 </head>
 <body>
     <div id="main">
@@ -61,100 +53,85 @@
             placeholder="Write in short"
             ></textarea> 
         </div>
-
-
-
-
-
-
         <div class="Form" id="rmt">
             <label for="ReachAtField"> Reach me at links</label> 
             <input
             type="text"
-            id="ReachAtField"
+            class="ReachAtField"
             placeholder="One link at a time"
             />
-            
-        </div>
-        <div class="addMore">
-            <button onclick="return addIP('rmt','input')" id="ReachAtField-add">Add more</button>
+        <div id="ReachAtField-add">
+            <button onclick="return addNew('input','ReachAtField','rmt','ReachAtField-add')">Add more</button>
        </div>
-
-
-
-
-
-
-
-
-
-
+    </div>
         <div class="Form" id='ExpField'>
             <p>Experience</p>
             <label for="OrganizationField"> Organization</label> 
             <input
             type="text"
-            id="OrganizationField"
+            class="OrganizationField"
             placeholder="Enter here"
             />
             <label for="PostField"> Post</label> 
             <input
             type="text"
-            id="PostField"
+            class="PostField"
             placeholder="Enter here"
             />
             <label for="StartDateField"> Start date </label> 
             <input
             type="month"
-            id="StartDateField"
+            class="StartDateField"
             placeholder="Enter here"
             />
             <label for="EndDateField"> End date </label> 
             <input
             type="month"
-            id="EndDateField"
+            class="EndDateField"
             placeholder="Enter here"
             /> 
+            <label for="ExpDescField">Description</label>
+            <textarea
+            class="ExpDescField"
+            placeholder="Write in short"
+            ></textarea> 
+        <div id="ExpField-add">
+            <button onclick="return addExp()">Add more</button>
         </div>
-        <div class="addMore">
-            <button onclick="addExp()"class="ExpField-add">Add more</button>
-        </div>
-
-
-
+    </div>
         <div class="Form" id="ProjField">
             <p>Projects</p>
             <label for="ProjectNameField"> Project Name</label> 
             <input
             type="text"
-            id="ProjectNameField"
+            class="ProjectNameField"
             placeholder="Enter here"
             />
             <label for="ProjectTechField"> Technologies used</label> 
             <input
             type="text"
-            id="ProjectTechField"
+            class="ProjectTechField"
             placeholder="Enter here"
             />
             <label for="ProjectDescField">Description</label>
             <textarea
-            id="ProjectDescField"
+            class="ProjectDescField"
             placeholder="Write in short"
             ></textarea> 
-        </div>
-        <div class="addMore">
-            <button onclick="addProj()" class="ProjectField-add">Add more</button>
+        <div id="ProjectField-add">
+            <button onclick="return addProj()" >Add more</button>
+       </div>
        </div>
 
-        <div class="Form"  id="AchieveField">
+        <div class="Form"  id="ach">
             <label for="AchieveField">Achievements</label>
             <textarea
-           
+            class="AchieveField"
             placeholder="Write in short"
             ></textarea>   
-        </div>
-        <div class="addMore">
-            <button onclick="addIP('AchieveField','textarea')"class="AchieveField-add">Add more</button>
+        <div id="AchieveField-add">
+            <button onclick="return addNew('textarea','AchieveField','ach','AchieveField-add')">Add more</button>
+       </div>
        </div>
 
         <div class="Form" id="EduField">
@@ -162,84 +139,83 @@
             <label for="InstuField"> Institute</label> 
             <input
             type="text"
-            id="InstuField"
+            class="InstuField"
             placeholder="Enter here"
             />
             <label for="InstuFromField"> From </label> 
             <input
             type="month"
-            id="InstuFromField"
+            class="InstuFromField"
             placeholder="Enter here"
             />
             <label for="InstuToField">To</label> 
             <input
             type="month"
-            id="InstuToField"
+            class="InstuToField"
             placeholder="Enter here"
             />
             <label for="InstuScoreField">CGPA / Percentage</label> 
             <input
             type="number"
-            id="InstuScoreField"
+            class="InstuScoreField"
             placeholder="Enter here"
             />
+        <div id="EduField-add">
+            <button onClick="return addEdu()">Add more</button>
         </div>
-        <div class="addMore">
-            <button onClick="addEdu()"class="InstuField-add">Add more</button>
-        </div>
+    </div>
 
         <div class="Form" id="TechField">
             <p>Technical skills</p>
             <label for="DomainField">Domain</label>
             <input
             type="text"
-            id="DomainField"
+            class="DomainField"
             placeholder="Enter here"
             />
             <label for="Skillsield">Skills</label>
-            <input
-            type="text"
-            id="SkillsField"
-            placeholder="Enter here"
-            />
+            <textarea
+            class="SkillsField"
+            placeholder="Write in short"
+            ></textarea> 
+        <div id="DomainField-add">
+            <button  onclick="return addDomain()">Add domain</button>
         </div>
-        <div class="addMore">
-            <button  onclick="addDomain()" class="DomainField-add">Add domain</button>
         </div>
 
-        <div class="Form"  id="ProfilesField">
+        <div class="Form"  id="impprof">
             <label for="ProfilesField"> Important profiles</label> 
             <input
             type="text"
+            class="ProfilesField"
             placeholder="One link at a time"
             /> 
-        </div>
-        <div class="addMore">
-            <button onclick="addIP('ProfilesField','input')" class="ProfilesField-add">Add more</button>
+        <div id="ProfilesField-add">
+            <button onclick="return addNew('input','ProfilesField','impprof','ProfilesField-add')">Add more</button>
+       </div>
        </div>
 
-        <div class="Form"   id="CWField">
+        <div class="Form"   id="cw">
             <label for="CWField"> CourseWork</label> 
             <input
             type="text"
+            class="CWField"
             placeholder="Enter here"
             /> 
-        </div>
-        <div class="addMore">
-            <button onclick="addIP('CWField','input')" class="CWField-add">Add more</button>
+        <div id="CWField-add">
+            <button onclick="return addNew('input','CWField','cw','CWField-add')">Add more</button>
        </div>
-
-
-
-        <div class="Form" id="InterestsField">
+    </div>
+        <div class="Form" id="int">
             <label for="InterestsField"> Interests</label> 
             <input
             type="text"
+            class="InterestsField"
             placeholder="Enter here"
             />
-        </div>
-        <div class="addMore">
-            <button onclick="addIP('InterestsField','input')" class="InterestsField-add">Add more</button>
+        <div id="InterestsField-add">
+            <button onclick="return addNew('input','InterestsField','int','InterestsField-add')" class="InterestsField-add">Add more</button>
+       </div>
        </div>
 
        <div>
@@ -248,12 +224,6 @@
     </form>
 </div>
 </div>
-
-
-
-
-
-
     <div id="shrutiHTML" style="display: none;"> 
     
        
@@ -277,36 +247,21 @@
             <div class="row">
                 <div class="col-sm-4">
                     <p id="title">EXPERIENCE</p>
-                    <p>
-                        <b>Software Engineer Summer Intern at Microsoft IDC</b><br>
-                        <!-- <img src="C:\Users\shruti\Desktop\RESUME\calender.png" width="15">May 2020-July 2020 -->
-                        <ul><li>Worked at Microsoft Garage India</li></ul>
+                    <p id="expT">Software Engineer Summer Intern at Microsoft IDC
+                    May 2020-July 2020
                     
-                        <b>Principle Global Service Hackathon 2020</b><br>
-                        <ul>
-                            <li>Developed am Event Scheduler App in React NAtive as Frotn end</li>
-                            <li>Used AWS AppSync for DyanamoDB APIs,AWS  Cogniyo for User Authentication</li>
-                        </ul>
-                    </p>
-
-                    <p id="title">POSITION OF RESPONSIBILITY</p>
-                    <p>
-                        <b>Member: WCE ACM Student Chapter</b><br>&emsp;
-                        <!-- <img src="C:\Users\shruti\Desktop\RESUME\calender.png" width="15">&emsp;Oct 2018 - Present -->
-                        <ul>
-                            <li>Worked in a team of organizinf a national level event WCE Hackathon 2019 & 2020</li>
-                            <li>Organized Jagruti'19, a Program to technically empower Women</li>
-                        </ul>
-                    </p>
-
+                    Worked at Microsoft Garage India
+                    Principle Global Service Hackathon 2020
+                    Developed am Event Scheduler App in React NAtive as Frotn end
+                    Used AWS AppSync for DyanamoDB APIs,AWS Cogniyo for User Authentication
+                </p>
                     <p id="title">PROJECTS</p>
-                    <p>
+                    <div id="projT">
                         <b>Reusable Academic Material Shopping Website</b><br>
                         <p id="language">&emsp;Django|HTML|CSS|BOOTSTRAP|Oracle SQL</p>
-                        <ul>
-                            <li>Website which helps students to sell the used academic material which is in good condition in colleg premises</li>
-                            <li>Features payment options using Stripe, searching products, viewing products by category</li>
-                        </ul>
+                        <p>Website which helps students to sell the used academic material which is in good condition in colleg premises
+                        Features payment options using Stripe, searching products, viewing products by category</p>
+
 
                         <b>ASL Spelling Intepreter</b><br>
                         <p id="language">&emsp;Computer vision|CNN</p>
@@ -321,10 +276,10 @@
                             <li>A data management System for Faculty of different dept. in college</li>
                             <li>Implemented in C using data Structure TRIE to efficienty Store, retrieve and update details of Faculty</li>
                         </ul> 
-                    </p>
+                    </div>
 
                     <p id="title">COURSEWORK</p>
-                    <ul>
+                    <ul id=cwT>
                         <li>Design& Analysis of algorithms</li>
                         <li>Advanced data structures</li>
                         <LI>OS</LI>
@@ -333,7 +288,7 @@
                 </div>
                 <div class="col-sm-4">
                     <p id="title">EDUCATION</p>
-                    <p>
+                    <div id="eduT">
                         <b>B.Tech in Computer SCience & Engg.</b><br>
                         <!-- <img src="C:\Users\shruti\Desktop\RESUME\calender.png" width="15">&nbsp;2017-2021&emsp;
                         <img src="C:\Users\shruti\Desktop\RESUME\Pin.png" width="15">CGPA: 9.37<br> -->
@@ -343,17 +298,16 @@
                         <b>Secondary(SSC)</b><br>
                         <!-- <img src="C:\Users\shruti\Desktop\RESUME\calender.png" width="15">&nbsp;2005-2015&emsp;
                         <img src="C:\Users\shruti\Desktop\RESUME\Pin.png" width="15">Score: 96%  -->
-                    </p>
+                    </div>
 
                     <p id="title">TECHNICAL SKILLS</p>
                     <p>
-                        <b>LANGUAGES</b><br>
-                        <ul>
+                        <ul id="skillsT">
                             <li>C</li>
                             <li>C++</li>
                             <LI>CORE JAVA(NOVICE)</LI>
                         </ul>
-                        <b>DEVELOPEMENT SKILLS</b><br>
+                        <!-- <b>DEVELOPEMENT SKILLS</b><br>
                         <ul>
                             <li>HTML</li>
                             <li>CSS</li>
@@ -370,11 +324,11 @@
                             <li>SQL</li>
                             <li>GIT</li>
                             <LI>AWS(BASIC)</LI>
-                        </ul>
+                        </ul> -->
                     </p>
 
                     <p id="title">PROGRAMMING PROFILES</p>
-                    <ul>
+                    <ul id="progprofT">
                         <li>Codechef</li>
                         <li>Hackerrank</li>
                         <LI>CodeForces</LI>
@@ -382,8 +336,8 @@
                     </ul>
 
                     <p id="title">ACHIEVEMENTS</p>
-                    <p>
-                        <ul>
+                    <p >
+                        <ul id="achieveT">
                             <li>Finalist for Techgig Geek Goddess contest for 2019</li>
                             <li>Cleared Qualification Round for Google CodeJam 2019& 2020, Facebook Hacker Cup 2019,TCS CodeVita 2019</li>
                             <li>Winner: 'Battle' of Codes' coding contest held at WCS, Sangli</li>
@@ -392,7 +346,7 @@
                     </p>
 
                     <p id="title">INTERESTS</p>
-                    <ul>
+                    <ul id="interestsT">
                         <li>CP</li>
                         <li>BasketBall</li>
                         <LI>Indian classical music</LI>
