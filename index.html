@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <title>Resume Builder</title>
-    <link rel="stylesheet" type="text/css" href="design.css" media="screen"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+
 </head>
 <body>
     <div id="main">
-    <header>
+ <header>
        <nav class="navbar">
            <ul class="nav-list">
                <li><a href="#main">Home</a></li>
@@ -32,8 +33,7 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae amet dolor nemo asperiores optio facilis magnam nesciunt molestiae velit accusamus voluptatum, consequatur exercitationem nisi maiores quaerat enim soluta cupiditate dolore!
         </p>
     </div>
-    <form>
-    <div id="Resume-form"> 
+    <form> 
         <h1> Build your Resume now</h1>
         <h2>Fill your details</h2>
         <div class="Form">
@@ -53,6 +53,7 @@
             placeholder="Write in short"
             ></textarea> 
         </div>
+
         <div class="Form" id="rmt">
             <label for="ReachAtField"> Reach me at links</label> 
             <input
@@ -99,6 +100,7 @@
             <button onclick="return addExp()">Add more</button>
         </div>
     </div>
+
         <div class="Form" id="ProjField">
             <p>Projects</p>
             <label for="ProjectNameField"> Project Name</label> 
@@ -206,6 +208,7 @@
             <button onclick="return addNew('input','CWField','cw','CWField-add')">Add more</button>
        </div>
     </div>
+
         <div class="Form" id="int">
             <label for="InterestsField"> Interests</label> 
             <input
@@ -222,141 +225,123 @@
            <button onclick="return change() ">Generate CV</button>
        </div>
     </form>
+</div>  
+
+</div> <!-- closing of main -->
+
+
+
+
+
+
+
+<div id="shrutiHTML" style="display: none;">
+ <div id="starting">
+    <p id="font_1">Gautami chate</p>
+    <p id="font_2">Final Year Graduate | Computer Science Enthusiast</p>
+    <div id="reachT">
+        <a href="gautami1999@gmail.com">gautami1999@gmail.com</a>
+    &emsp;&emsp;
+    <a href="gautamichate18">gautamichate18</a>
+    &emsp;&emsp;
+    <a href="Gautya18">Gautya18</a>
+    <br><br>
+    </div> <!-- closing of reachT-->
 </div>
-</div>
-    <div id="shrutiHTML" style="display: none;"> 
-    
-       
-        <div id="bg">
-            <p id="font_1">Gautami Chate</p>
-            <p id="font_2">Final Year Graduate | Computer Science Enthusiast</p>
-            <div id="reachT">
-            <!-- <img src="C:\Users\shruti\Desktop\RESUME\gmail.png" width="20"> -->
-            <a href="gautami1999@gmail.com">gautami1999@gmail.com</a>
-            &emsp;&emsp;
-            <!-- <img src="C:\Users\shruti\Desktop\RESUME\Linkedin.png" width="20"> -->
-            <a href="gautamichate18">gautamichate18</a>
-            &emsp;&emsp;
-            <!-- <img src="C:\Users\shruti\Desktop\RESUME\github.png" width="20"> -->
-            <a href="Gautya18">Gautya18</a>
-            <br><br>
-            </div>
-        </div>
-        
-        <div class="Container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <p id="title">EXPERIENCE</p>
+
+
+    <div class="left">
+        <p id="title">EXPERIENCE</p>
                     <p id="expT">Software Engineer Summer Intern at Microsoft IDC
                     May 2020-July 2020
-                    
                     Worked at Microsoft Garage India
                     Principle Global Service Hackathon 2020
                     Developed am Event Scheduler App in React NAtive as Frotn end
                     Used AWS AppSync for DyanamoDB APIs,AWS Cogniyo for User Authentication
+        </p>  
+        
+        <p id="title">PROJECTS</p>
+        <div id="projT">
+            <b>Reusable Academic Material Shopping Website</b><br>
+            <p id="language">&emsp;Django|HTML|CSS|BOOTSTRAP|Oracle SQL</p>
+            <p>Website which helps students to sell the used academic material which is in good condition in colleg premises
+            Features payment options using Stripe, searching products, viewing products by category</p>
+
+
+            <b>ASL Spelling Intepreter</b><br>
+            <p id="language">&emsp;Computer vision|CNN</p>
+            <ul>
+                <li>A tool which interprets American sign language gestures for aplhabets and converts into text</li>
+                <li>Implemented in python,using OpenCV and TensorFlow</li>
+            </ul>
+            
+            <b>Faculty Details Management System</b><br>
+            <p id="language">&emsp;C|Adavanced Data Structure</p>
+            <ul>
+                <li>A data management System for Faculty of different dept. in college</li>
+                <li>Implemented in C using data Structure TRIE to efficienty Store, retrieve and update details of Faculty</li>
+            </ul> 
+        </div>
+        <p id="title">COURSEWORK</p>
+        <ul id=cwT>
+            <li>Design& Analysis of algorithms</li>
+            <li>Advanced data structures</li>
+            <LI>OS</LI>
+            <li>DBMS</li>
+        </ul>
+
+
+    </div> <!-- closing of  left-->
+    <div class="right">
+            <p id="title">EDUCATION</p>
+            <div id="eduT">
+                <b>B.Tech in Computer SCience & Engg.</b><br>
+                <b>Higher Secondary(HSC)</b><br>
+                <b>Secondary(SSC)</b><br>
+            </div> <!-- closing of eduT-->
+
+            <p id="title">TECHNICAL SKILLS</p>
+            <p>
+                <ul id="skillsT">
+                    <li>C</li>
+                    <li>C++</li>
+                    <LI>CORE JAVA(NOVICE)</LI>
+                </ul>
                 </p>
-                    <p id="title">PROJECTS</p>
-                    <div id="projT">
-                        <b>Reusable Academic Material Shopping Website</b><br>
-                        <p id="language">&emsp;Django|HTML|CSS|BOOTSTRAP|Oracle SQL</p>
-                        <p>Website which helps students to sell the used academic material which is in good condition in colleg premises
-                        Features payment options using Stripe, searching products, viewing products by category</p>
+                <p id="title">PROGRAMMING PROFILES</p>
+                <ul id="progprofT">
+                    <li>Codechef</li>
+                    <li>Hackerrank</li>
+                    <LI>CodeForces</LI>
+                    <li>LeetCode</li>
+                </ul>
 
-
-                        <b>ASL Spelling Intepreter</b><br>
-                        <p id="language">&emsp;Computer vision|CNN</p>
-                        <ul>
-                            <li>A tool which interprets American sign language gestures for aplhabets and converts into text</li>
-                            <li>Implemented in python,using OpenCV and TensorFlow</li>
-                        </ul>
-                        
-                        <b>Faculty Details Management System</b><br>
-                        <p id="language">&emsp;C|Adavanced Data Structure</p>
-                        <ul>
-                            <li>A data management System for Faculty of different dept. in college</li>
-                            <li>Implemented in C using data Structure TRIE to efficienty Store, retrieve and update details of Faculty</li>
-                        </ul> 
-                    </div>
-
-                    <p id="title">COURSEWORK</p>
-                    <ul id=cwT>
-                        <li>Design& Analysis of algorithms</li>
-                        <li>Advanced data structures</li>
-                        <LI>OS</LI>
-                        <li>DBMS</li>
+                <p id="title">ACHIEVEMENTS</p>
+                <p >
+                    <ul id="achieveT">
+                        <li>Finalist for Techgig Geek Goddess contest for 2019</li>
+                        <li>Cleared Qualification Round for Google CodeJam 2019& 2020, Facebook Hacker Cup 2019,TCS CodeVita 2019</li>
+                        <li>Winner: 'Battle' of Codes' coding contest held at WCS, Sangli</li>
+                        <li>Second Runner up:'Just Codinf',PULZION'18,PICT,Pune</li>
                     </ul>
-                </div>
-                <div class="col-sm-4">
-                    <p id="title">EDUCATION</p>
-                    <div id="eduT">
-                        <b>B.Tech in Computer SCience & Engg.</b><br>
-                        <!-- <img src="C:\Users\shruti\Desktop\RESUME\calender.png" width="15">&nbsp;2017-2021&emsp;
-                        <img src="C:\Users\shruti\Desktop\RESUME\Pin.png" width="15">CGPA: 9.37<br> -->
-                        <b>Higher Secondary(HSC)</b><br>
-                        <!-- <img src="C:\Users\shruti\Desktop\RESUME\calender.png" width="15">&nbsp;2015-2017&emsp;
-                        <img src="C:\Users\shruti\Desktop\RESUME\Pin.png" width="15">Score: 93%<br> -->
-                        <b>Secondary(SSC)</b><br>
-                        <!-- <img src="C:\Users\shruti\Desktop\RESUME\calender.png" width="15">&nbsp;2005-2015&emsp;
-                        <img src="C:\Users\shruti\Desktop\RESUME\Pin.png" width="15">Score: 96%  -->
-                    </div>
+                </p>
+                <p id="title">INTERESTS</p>
+                <ul id="interestsT">
+                    <li>CP</li>
+                    <li>BasketBall</li>
+                    <LI>Indian classical music</LI>
+                    <li>Book reading</li>
+                </ul>
 
-                    <p id="title">TECHNICAL SKILLS</p>
-                    <p>
-                        <ul id="skillsT">
-                            <li>C</li>
-                            <li>C++</li>
-                            <LI>CORE JAVA(NOVICE)</LI>
-                        </ul>
-                        <!-- <b>DEVELOPEMENT SKILLS</b><br>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <LI>JAVASCRIPT</LI>
-                            <li>DJANGO</li>
-                        </ul>
-                        <b>DATABASES</b><br>
-                        <ul>
-                            <li>ORACLE SQL</li>
-                            <li>MANGODB</li>
-                        </ul>
-                        <b>OTHERS</b><br>
-                        <ul>
-                            <li>SQL</li>
-                            <li>GIT</li>
-                            <LI>AWS(BASIC)</LI>
-                        </ul> -->
-                    </p>
+            </div> <!--closing of right-->
+       
+    <button onclick="window.print()">Print CV</button>
+</div> <!--closing of shrutiHTML-->
 
-                    <p id="title">PROGRAMMING PROFILES</p>
-                    <ul id="progprofT">
-                        <li>Codechef</li>
-                        <li>Hackerrank</li>
-                        <LI>CodeForces</LI>
-                        <li>LeetCode</li>
-                    </ul>
 
-                    <p id="title">ACHIEVEMENTS</p>
-                    <p >
-                        <ul id="achieveT">
-                            <li>Finalist for Techgig Geek Goddess contest for 2019</li>
-                            <li>Cleared Qualification Round for Google CodeJam 2019& 2020, Facebook Hacker Cup 2019,TCS CodeVita 2019</li>
-                            <li>Winner: 'Battle' of Codes' coding contest held at WCS, Sangli</li>
-                            <li>Second Runner up:'Just Codinf',PULZION'18,PICT,Pune</li>
-                        </ul>
-                    </p>
 
-                    <p id="title">INTERESTS</p>
-                    <ul id="interestsT">
-                        <li>CP</li>
-                        <li>BasketBall</li>
-                        <LI>Indian classical music</LI>
-                        <li>Book reading</li>
-                    </ul>
-                </div> 
-            </div>
-        </div>  
-        <button onclick="printCV()">Print CV</button>
-    </div> 
+
     </body>
+   
 </html>
 
