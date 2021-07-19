@@ -249,3 +249,11 @@ document.getElementById("skillsT").innerHTML=str;
 document.getElementById("main").style.display="none";
     return false;
 }
+function printCV()
+{
+    var printButton = document.getElementById("printBtn");
+        printButton.style.visibility = 'hidden';
+        window.print();
+        printButton.style.visibility = 'visible';
+}
+
