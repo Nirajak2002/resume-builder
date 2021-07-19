@@ -1,4 +1,4 @@
-function addNew(ip,classField,field,btn)//,myLabel
+function addNew(ip,classField,field,btn)
 {
     let newF=document.createElement(ip);
     newF.classList.add(classField);
@@ -6,7 +6,9 @@ function addNew(ip,classField,field,btn)//,myLabel
     let weAdd=document.getElementById(btn);
     weOb.insertBefore(newF,weAdd);
     return false;
+
 }
+
 function addExp()
 {
     let new1=document.createElement("input");
@@ -162,7 +164,7 @@ function change()
    let str="";
     for (let e of wes)
     {
-            str=str+`<li> ${e.value}</li>`;
+            str=str+Array(10).fill('\xa0').join('')+`${e.value}`;
     }
    document.getElementById("reachT").innerHTML=str;
    str="";
@@ -173,7 +175,7 @@ function change()
     }
     document.getElementById("achieveT").innerHTML=str;
     wes=document.getElementsByClassName("InterestsField");
-    str3="";
+    str="";
     for(let e of wes)
     {
         str=str+`<li>${e.value}</li>`;
@@ -244,5 +246,6 @@ function change()
     if(flg==0)break;
 }
 document.getElementById("skillsT").innerHTML=str;
+document.getElementById("main").style.display="none";
     return false;
 }
