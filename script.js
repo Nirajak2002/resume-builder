@@ -4,9 +4,10 @@ function addNew(ip,classField,field,btn)
     newF.classList.add(classField);
     let weOb=document.getElementById(field);
     let weAdd=document.getElementById(btn);
+    let nn=document.createElement("br");
+    weOb.insertBefore(nn,weAdd);
     weOb.insertBefore(newF,weAdd);
     return false;
-
 }
 
 function addExp()
@@ -26,33 +27,36 @@ function addExp()
     new3.setAttribute("type","month");
     new4.setAttribute("type","month");
 
+    let nn=document.createElement("br");
+    weOb.insertBefore(nn,weAdd);
+
     new1.classList.add("OrganizationField");
     lab1.setAttribute("for","new1");
-    lab1.innerHTML="Organization";
+    lab1.innerHTML=" Organization ";
     weOb.insertBefore(lab1,weAdd);
    weOb.insertBefore(new1,weAdd);
 
    new2.classList.add("PostField");
     lab2.setAttribute("for","new2");
-    lab2.innerHTML="Post";
+    lab2.innerHTML="Post ";
     weOb.insertBefore(lab2,weAdd);
   weOb.insertBefore(new2,weAdd);
 
   new3.classList.add("StartDateField");
   lab3.setAttribute("for","new3");
-  lab3.innerHTML="Start Date";
+  lab3.innerHTML="Start Date ";
   weOb.insertBefore(lab3,weAdd);
  weOb.insertBefore(new3,weAdd);
 
  new4.classList.add("EndDateField");
  lab4.setAttribute("for","new4");
- lab4.innerHTML="End date";
+ lab4.innerHTML="End date ";
  weOb.insertBefore(lab4,weAdd);
  weOb.insertBefore(new4,weAdd);
 
  new5.classList.add("ExpDescField");
  lab5.setAttribute("for","new5");
- lab5.innerHTML="Description";
+ lab5.innerHTML="Description ";
  weOb.insertBefore(lab5,weAdd);
  weOb.insertBefore(new5,weAdd);
  return false;
@@ -74,29 +78,32 @@ function addEdu()
     let weOb=document.getElementById("EduField");
     let weAdd=document.getElementById("EduField-add");
 
-    new1.classList.add("InstuField");
-    lab1.setAttribute("for","new1");
-    lab1.innerHTML="Institution";
-    weOb.insertBefore(lab1,weAdd);
-   weOb.insertBefore(new1,weAdd);
+    let nn=document.createElement("br");
+    weOb.insertBefore(nn,weAdd);
 
-   new2.classList.add("InstuFromField");
-    lab2.setAttribute("for","new2");
-    lab2.innerHTML="From";
-    weOb.insertBefore(lab2,weAdd);
-  weOb.insertBefore(new2,weAdd);
+      new1.classList.add("InstuField");
+      lab1.setAttribute("for","new1");
+      lab1.innerHTML=" Institute";
+      weOb.insertBefore(lab1,weAdd);
+     weOb.insertBefore(new1,weAdd);
 
-  new3.classList.add("InstuToField");
-  lab3.setAttribute("for","new3");
-  lab3.innerHTML="To";
-  weOb.insertBefore(lab3,weAdd);
- weOb.insertBefore(new3,weAdd);
+     new2.classList.add("InstuFromField");
+      lab2.setAttribute("for","new2");
+      lab2.innerHTML=" From";
+      weOb.insertBefore(lab2,weAdd);
+    weOb.insertBefore(new2,weAdd);
 
- new4.classList.add("InstuScoreField");
-  lab4.setAttribute("for","new4");
-  lab4.innerHTML="Score / CGPA";
-  weOb.insertBefore(lab4,weAdd);
- weOb.insertBefore(new4,weAdd);
+    new3.classList.add("InstuToField");
+    lab3.setAttribute("for","new3");
+    lab3.innerHTML=" To";
+    weOb.insertBefore(lab3,weAdd);
+   weOb.insertBefore(new3,weAdd);
+
+   new4.classList.add("InstuScoreField");
+    lab4.setAttribute("for","new4");
+    lab4.innerHTML=" Score / CGPA";
+    weOb.insertBefore(lab4,weAdd);
+   weOb.insertBefore(new4,weAdd);
  return false;
 }
 
@@ -110,6 +117,9 @@ function addProj()
     let lab3=document.createElement("label");
     let weOb=document.getElementById("ProjField");
     let weAdd=document.getElementById("ProjectField-add");
+    let nn=document.createElement("br");
+    weOb.insertBefore(nn,weAdd);
+
     new1.classList.add("ProjectNameField");
     lab1.setAttribute("for","new1");
     lab1.innerHTML="Project Name";
@@ -138,6 +148,8 @@ function addDomain()
     let weAdd=document.getElementById("DomainField-add");
     let lab1=document.createElement("label");
     let lab2=document.createElement("label");
+    let nn=document.createElement("br");
+    weOb.insertBefore(nn,weAdd);
     new1.classList.add("DomainField");
     lab1.setAttribute("for","new1");
     lab1.innerHTML="Domain";
@@ -156,8 +168,8 @@ function change()
 
 {
     console.log("start");
-    document.getElementById("shrutiHTML").style.display="block";
-    document.getElementById("shrutiHTML").scrollIntoView();
+    document.getElementById("FormTemplate").style.display="block";
+    document.getElementById("FormTemplate").scrollIntoView();
    document.getElementById("font_1").innerHTML=document.getElementById("NameField").value;
    document.getElementById("font_2").innerHTML=document.getElementById("AboutField").value;
    let wes=document.getElementsByClassName("ReachAtField");
@@ -181,13 +193,6 @@ function change()
         str=str+`<li>${e.value}</li>`;
     }
     document.getElementById("interestsT").innerHTML=str;
-     wes=document.getElementsByClassName("ProfilesField");
-     str="";
-    for(let e of wes)
-    {
-        str=str+`<li>${e.value}</li>`;
-    }
-    document.getElementById("progprofT").innerHTML=str;
     wes=document.getElementsByClassName("CWField");
      str="";
     for(let e of wes)
@@ -256,4 +261,3 @@ function printCV()
         window.print();
         printButton.style.visibility = 'visible';
 }
-
