@@ -1,347 +1,247 @@
 <!DOCTYPE html>
-<html   lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+    <script src="Script.js"></script>
     <title>Resume Builder</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
-
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
 </head>
 <body>
     <div id="main">
- <header>
-       <nav class="navbar">
-           <ul class="nav-list">
-               <li><a href="#main">Home</a></li>
-               <li><a href="#About-us">About Us</a></li>
-               <li><a href="#Resume-form">Build Now</a></li>
-           </ul>
-       </nav>
-       <h1> Your Resume</h1>
-       <h1> Defines YOU</h1>
-       <p> Having trouble in what to add & how to arrange your resume ? We are here to help you out! </p>
-       <button class="btn1"> Create Now </button>
-    </header>
-    <div id="About-us">
-        <h1> About US</h1>
-        <p> 
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae amet dolor nemo asperiores optio facilis magnam nesciunt molestiae velit accusamus voluptatum, consequatur exercitationem nisi maiores quaerat enim soluta cupiditate dolore!
-        </p>
-    </div>
-    <form> 
-        <h1> Build your Resume now</h1>
-        <h2>Fill your details</h2>
-        <div class="Form">
-            <label for="NameField">Your Name</label>
-            <input 
-            type="text"
-            id="NameField"
-            name="name"
-            placeholder="Enter here"
-            />   
+        <header>
+           <nav class="navbar">
+               <ul class="nav-list">
+                   <li><a href="#Home">Home</a></li>
+                   <li><a href="#About-us">About Us</a></li>
+                   <li><a href="#FormDivide">Build Now</a></li>
+               </ul>
+           </nav>
+           <div> Having trouble in what to add & how to arrange your resume ? We are here to help you out! </div>
+           <!-- <button class="btn1"> Create Now </button> -->
+        </header>
+        <div id="About-us">
+            <h1> About US</h1>
+            <div> 
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae amet dolor nemo asperiores optio facilis magnam nesciunt molestiae velit accusamus voluptatum, consequatur exercitationem nisi maiores quaerat enim soluta cupiditate dolore!
+            </div>
+        </div>
+        <form>
+            <h2>Fill your details</h2>
+            <div id="FormDivide">
+                <div class="Form">
+                    <label for="NameField" id="title"><img src="https://image.flaticon.com/icons/png/128/108/108186.png" width="20px"> Your Name</label><br><br>
+                    <input 
+                    type="text"
+                    id="NameField"
+                    name="name"
+                    placeholder="Enter here"
+                    /><hr>
+                </div>
+                <div class="Form">
+                    <label for="AboutField" id="title"><img src="https://image.flaticon.com/icons/png/128/63/63830.png" width="20px"> About yourself</label><br><br>
+                    <textarea
+                    rows="1" cols="20"
+                    id="AboutField"
+                    placeholder="Write in short"
+                    ></textarea><hr>
+                </div>
+                <div class="Form" id="rmt">
+                    <label for="ReachAtField"id="title"><img src="https://image.flaticon.com/icons/png/128/455/455691.png" width="20px"> Reach me at links</label><br><br>
+                    <input
+                    type="text"
+                    class="ReachAtField"
+                    placeholder="One link at a time"
+                    />
+                    <div id="ReachAtField-add" id="title"><br>
+                        <button onclick="return addNew('input','ReachAtField','rmt','ReachAtField-add')">Add more</button>
+                    </div><hr>
+                </div>
+                <div class="Form" id='ExpField'>
+                    <label id="title"><img src="https://image.flaticon.com/icons/png/128/47/47815.png" width="25px"> Experience</label><br>
+                    <label for="OrganizationField" id="sub-title">Orgnization</label>
+                    <input
+                    type="text"
+                    class="OrganizationField"
+                    placeholder="Enter here"
+                    />
+                    <label for="PostField" id="sub-title">Post</label>
+                    <input
+                    type="text"
+                    class="PostField"
+                    placeholder="Enter here"
+                    />
+                    <label for="StartDateField" id="sub-title">Start date </label>
+                    <input
+                    type="month"
+                    class="StartDateField"
+                    placeholder="Enter here"
+                    />
+                    <label for="EndDateField" id="sub-title">End date </label>
+                    <input
+                    type="month"
+                    class="EndDateField"
+                    placeholder="Enter here"
+                    />
+                    <label for="ExpDescField" id="sub-title">Description</label>
+                    <textarea
+                    class="ExpDescField"
+                    placeholder="Write in short"
+                    ></textarea> <br>
+                    <div id="ExpField-add"><br>
+                        <button onclick="return addExp()">Add more</button>
+                    </div>
+                </div><hr>
+                <div class="Form" id="ProjField">
+                    <label id="title"><img src="https://img-premium.flaticon.com/png/128/1664/premium/1664875.png?token=exp=1626855934~hmac=1b3a0f454d0a06f8e8668a71096dce87" width="20px"> Projects</label><br>
+                    <label for="ProjectNameField" id="sub-title">Project Name</label>
+                    <input
+                    type="text"
+                    class="ProjectNameField"
+                    placeholder="Enter here"
+                    />
+                    <label for="ProjectTechField" id="sub-title">Technologies used</label>
+                    <input
+                    type="text"
+                    class="ProjectTechField"
+                    placeholder="Enter here"
+                    />
+                    <label for="ProjectDescField" id="sub-title">Description</label>
+                    <textarea
+                    class="ProjectDescField"
+                    placeholder="Write in short"
+                    ></textarea><br>
+                    <div id="ProjectField-add"><br>
+                        <button onclick="return addProj()" >Add more</button><br>
+                   </div>
+                </div><hr>
+
+                <div class="Form"  id="ach">
+                    <label for="AchieveField" id="title"><img src="https://image.flaticon.com/icons/png/128/3112/3112817.png" width="20px"> Achievements</label><br><br>
+                    <textarea
+                    class="AchieveField"
+                    placeholder="Write in short"
+                    ></textarea>  
+                    <div id="AchieveField-add">
+                        <button onclick="return addNew('textarea','AchieveField','ach','AchieveField-add')">Add more</button>
+                    </div>
+                </div><hr>
+
+                <div class="Form" id="EduField">
+                    <label id="title"><img src="https://img-premium.flaticon.com/png/128/3074/premium/3074094.png?token=exp=1626856034~hmac=d50e03f5b860ea5b18d9d5a07585bc39" width="20px"> Education</label><br><br>
+                    <label for="InstuField" id="sub-title">Institute</label>
+                    <input
+                    type="text"
+                    class="InstuField"
+                    placeholder="Enter here"
+                    />
+                    <label for="InstuFromField"id="sub-title">From</label>
+                    <input
+                    type="month"
+                    class="InstuFromField"
+                    placeholder="Enter here"
+                    />
+                    <label for="InstuToField"id="sub-title">To</label>
+                    <input
+                    type="month"
+                    class="InstuToField"
+                    placeholder="Enter here"
+                    />
+                    <label for="InstuScoreField"id="sub-title">CGPA/Percentage</label> 
+                    <input
+                    type="number"
+                    class="InstuScoreField"
+                    placeholder="Enter here"
+                    />
+                    <div id="EduField-add"><br>
+                        <button onClick="return addEdu()">Add more</button><br>
+                    </div>
+                </div><hr>
+
+                <div class="Form" id="TechField">
+                    <label id="title"><img src="https://image.flaticon.com/icons/png/128/3522/3522036.png" width="20px"> Technical skills</label><br>
+                    <label for="DomainField" id="sub-title">Domain</label>
+                    <input
+                    type="text"
+                    class="DomainField"
+                    placeholder="Enter here"
+                    />
+                    <label for="Skillsield" id="sub-title">Skills</label>
+                    <textarea
+                    class="SkillsField"
+                    placeholder="Write in short"
+                    ></textarea>
+                    <div id="DomainField-add"><br>
+                        <button  onclick="return addDomain()">Add domain</button>
+                    </div>
+                </div><hr>
+
+                <div class="Form"   id="cw">
+                    <label for="CWField" id="title"><img src="https://image.flaticon.com/icons/png/128/830/830999.png" width="20px"> CourseWork</label><br><br>
+                    <input
+                    type="text"
+                    class="CWField"
+                    placeholder="Enter here"
+                    /> 
+                    <div id="CWField-add"><br>
+                        <button onclick="return addNew('input','CWField','cw','CWField-add')">Add more</button>
+                   </div>
+                </div><hr>
+
+                <div class="Form" id="int">
+                    <label for="InterestsField" id="title"><img src="https://image.flaticon.com/icons/png/128/1668/1668151.png" width="15px"> Interests</label><br><br>
+                    <input
+                    type="text"
+                    class="InterestsField"
+                    placeholder="Enter here"
+                    />
+                    <div id="InterestsField-add"><br>
+                        <button onclick="return addNew('input','InterestsField','int','InterestsField-add')" class="InterestsField-add">Add more</button>
+                   </div>
+                </div>
+            </div>
+            <div>
+                <button  onclick="return change() " class="GenerateButton ">Preview</button>
+            </div>
+        </form>
+    </div>  <!-- closing of main -->
+
+    <div id="FormTemplate" style="display: none;">
+        <div id="starting">
+            <div id="font_1"></div>
+            <div id="font_2"></div>
+            <div id="reachT"></div> <!-- closing of reachT-->
         </div>
 
-        <div class="Form">
-            <label for="AboutField">About yourself</label>
-            <textarea
-            id="AboutField"
-            placeholder="Write in short"
-            ></textarea> 
-        </div>
+        <div class="left">
+            <div id="title1">EXPERIENCE</div>
+            <div id="expT"></div>  
+            <div id="title1">PROJECTS</div>
+            <div id="projT"></div>
+            <div id="title1">COURSEWORK</div>
+            <ul id=cwT></ul>
+        </div> <!-- closing of  left-->
 
-        <div class="Form" id="rmt">
-            <label for="ReachAtField"> Reach me at links</label> 
-            <input
-            type="text"
-            class="ReachAtField"
-            placeholder="One link at a time"
-            />
-        <div id="ReachAtField-add">
-            <button onclick="return addNew('input','ReachAtField','rmt','ReachAtField-add')">Add more</button>
-       </div>
-    </div>
-        <div class="Form" id='ExpField'>
-            <p>Experience</p>
-            <label for="OrganizationField"> Organization</label> 
-            <input
-            type="text"
-            class="OrganizationField"
-            placeholder="Enter here"
-            />
-            <label for="PostField"> Post</label> 
-            <input
-            type="text"
-            class="PostField"
-            placeholder="Enter here"
-            />
-            <label for="StartDateField"> Start date </label> 
-            <input
-            type="month"
-            class="StartDateField"
-            placeholder="Enter here"
-            />
-            <label for="EndDateField"> End date </label> 
-            <input
-            type="month"
-            class="EndDateField"
-            placeholder="Enter here"
-            /> 
-            <label for="ExpDescField">Description</label>
-            <textarea
-            class="ExpDescField"
-            placeholder="Write in short"
-            ></textarea> 
-        <div id="ExpField-add">
-            <button onclick="return addExp()">Add more</button>
-        </div>
-    </div>
+        <div class="right">
+                <div id="title1">EDUCATION</div>
+                <div id="eduT"></div>  <!-- closing of eduT -->
 
-        <div class="Form" id="ProjField">
-            <p>Projects</p>
-            <label for="ProjectNameField"> Project Name</label> 
-            <input
-            type="text"
-            class="ProjectNameField"
-            placeholder="Enter here"
-            />
-            <label for="ProjectTechField"> Technologies used</label> 
-            <input
-            type="text"
-            class="ProjectTechField"
-            placeholder="Enter here"
-            />
-            <label for="ProjectDescField">Description</label>
-            <textarea
-            class="ProjectDescField"
-            placeholder="Write in short"
-            ></textarea> 
-        <div id="ProjectField-add">
-            <button onclick="return addProj()" >Add more</button>
-       </div>
-       </div>
-
-        <div class="Form"  id="ach">
-            <label for="AchieveField">Achievements</label>
-            <textarea
-            class="AchieveField"
-            placeholder="Write in short"
-            ></textarea>   
-        <div id="AchieveField-add">
-            <button onclick="return addNew('textarea','AchieveField','ach','AchieveField-add')">Add more</button>
-       </div>
-       </div>
-
-        <div class="Form" id="EduField">
-            <p>Eduation</p>
-            <label for="InstuField"> Institute</label> 
-            <input
-            type="text"
-            class="InstuField"
-            placeholder="Enter here"
-            />
-            <label for="InstuFromField"> From </label> 
-            <input
-            type="month"
-            class="InstuFromField"
-            placeholder="Enter here"
-            />
-            <label for="InstuToField">To</label> 
-            <input
-            type="month"
-            class="InstuToField"
-            placeholder="Enter here"
-            />
-            <label for="InstuScoreField">CGPA / Percentage</label> 
-            <input
-            type="number"
-            class="InstuScoreField"
-            placeholder="Enter here"
-            />
-        <div id="EduField-add">
-            <button onClick="return addEdu()">Add more</button>
-        </div>
-    </div>
-
-        <div class="Form" id="TechField">
-            <p>Technical skills</p>
-            <label for="DomainField">Domain</label>
-            <input
-            type="text"
-            class="DomainField"
-            placeholder="Enter here"
-            />
-            <label for="Skillsield">Skills</label>
-            <textarea
-            class="SkillsField"
-            placeholder="Write in short"
-            ></textarea> 
-        <div id="DomainField-add">
-            <button  onclick="return addDomain()">Add domain</button>
-        </div>
-        </div>
-
-        <div class="Form"  id="impprof">
-            <label for="ProfilesField"> Important profiles</label> 
-            <input
-            type="text"
-            class="ProfilesField"
-            placeholder="One link at a time"
-            /> 
-        <div id="ProfilesField-add">
-            <button onclick="return addNew('input','ProfilesField','impprof','ProfilesField-add')">Add more</button>
-       </div>
-       </div>
-
-        <div class="Form"   id="cw">
-            <label for="CWField"> CourseWork</label> 
-            <input
-            type="text"
-            class="CWField"
-            placeholder="Enter here"
-            /> 
-        <div id="CWField-add">
-            <button onclick="return addNew('input','CWField','cw','CWField-add')">Add more</button>
-       </div>
-    </div>
-
-        <div class="Form" id="int">
-            <label for="InterestsField"> Interests</label> 
-            <input
-            type="text"
-            class="InterestsField"
-            placeholder="Enter here"
-            />
-        <div id="InterestsField-add">
-            <button onclick="return addNew('input','InterestsField','int','InterestsField-add')" class="InterestsField-add">Add more</button>
-       </div>
-       </div>
-
-       <div>
-           <button onclick="return change() ">Generate CV</button>
-       </div>
-    </form>
-</div>  
-
-</div> <!-- closing of main -->
-
-
-
-
-
-
-
-<div id="shrutiHTML" style="display: none;">
- <div id="starting">
-    <p id="font_1">Gautami chate</p>
-    <p id="font_2">Final Year Graduate | Computer Science Enthusiast</p>
-    <div id="reachT">
-        <a href="gautami1999@gmail.com">gautami1999@gmail.com</a>
-    &emsp;&emsp;
-    <a href="gautamichate18">gautamichate18</a>
-    &emsp;&emsp;
-    <a href="Gautya18">Gautya18</a>
-    <br><br>
-    </div> <!-- closing of reachT-->
-</div>
-
-
-    <div class="left">
-        <p id="title">EXPERIENCE</p>
-                    <p id="expT">Software Engineer Summer Intern at Microsoft IDC
-                    May 2020-July 2020
-                    Worked at Microsoft Garage India
-                    Principle Global Service Hackathon 2020
-                    Developed am Event Scheduler App in React NAtive as Frotn end
-                    Used AWS AppSync for DyanamoDB APIs,AWS Cogniyo for User Authentication
-        </p>  
-        
-        <p id="title">PROJECTS</p>
-        <div id="projT">
-            <b>Reusable Academic Material Shopping Website</b><br>
-            <p id="language">&emsp;Django|HTML|CSS|BOOTSTRAP|Oracle SQL</p>
-            <p>Website which helps students to sell the used academic material which is in good condition in colleg premises
-            Features payment options using Stripe, searching products, viewing products by category</p>
-
-
-            <b>ASL Spelling Intepreter</b><br>
-            <p id="language">&emsp;Computer vision|CNN</p>
-            <ul>
-                <li>A tool which interprets American sign language gestures for aplhabets and converts into text</li>
-                <li>Implemented in python,using OpenCV and TensorFlow</li>
-            </ul>
-            
-            <b>Faculty Details Management System</b><br>
-            <p id="language">&emsp;C|Adavanced Data Structure</p>
-            <ul>
-                <li>A data management System for Faculty of different dept. in college</li>
-                <li>Implemented in C using data Structure TRIE to efficienty Store, retrieve and update details of Faculty</li>
-            </ul> 
-        </div>
-        <p id="title">COURSEWORK</p>
-        <ul id=cwT>
-            <li>Design& Analysis of algorithms</li>
-            <li>Advanced data structures</li>
-            <LI>OS</LI>
-            <li>DBMS</li>
-        </ul>
-
-
-    </div> <!-- closing of  left-->
-    <div class="right">
-            <p id="title">EDUCATION</p>
-            <div id="eduT">
-                <b>B.Tech in Computer SCience & Engg.</b><br>
-                <b>Higher Secondary(HSC)</b><br>
-                <b>Secondary(SSC)</b><br>
-            </div> <!-- closing of eduT-->
-
-            <p id="title">TECHNICAL SKILLS</p>
-            <p>
-                <ul id="skillsT">
-                    <li>C</li>
-                    <li>C++</li>
-                    <LI>CORE JAVA(NOVICE)</LI>
-                </ul>
-                </p>
-                <p id="title">PROGRAMMING PROFILES</p>
-                <ul id="progprofT">
-                    <li>Codechef</li>
-                    <li>Hackerrank</li>
-                    <LI>CodeForces</LI>
-                    <li>LeetCode</li>
-                </ul>
-
-                <p id="title">ACHIEVEMENTS</p>
-                <p >
-                    <ul id="achieveT">
-                        <li>Finalist for Techgig Geek Goddess contest for 2019</li>
-                        <li>Cleared Qualification Round for Google CodeJam 2019& 2020, Facebook Hacker Cup 2019,TCS CodeVita 2019</li>
-                        <li>Winner: 'Battle' of Codes' coding contest held at WCS, Sangli</li>
-                        <li>Second Runner up:'Just Codinf',PULZION'18,PICT,Pune</li>
-                    </ul>
-                </p>
-                <p id="title">INTERESTS</p>
-                <ul id="interestsT">
-                    <li>CP</li>
-                    <li>BasketBall</li>
-                    <LI>Indian classical music</LI>
-                    <li>Book reading</li>
-                </ul>
-
-            </div> <!--closing of right-->
-       
-    <button id="printBtn" onclick="printCV()">Print CV</button>
-</div> <!--closing of shrutiHTML-->
-
-
-
-
-    </body>
-   
+                <div id="title1">TECHNICAL SKILLS</div>
+                <div>
+                    <ul id="skillsT"></ul>
+                </div>
+                <div id="title1">ACHIEVEMENTS</div>
+                <div >
+                    <ul id="achieveT"></ul>
+                </div>
+                <div id="title1">INTERESTS</div>
+                <ul id="interestsT"></ul>
+        </div>  <!--closing of right-->
+        <button id="printBtn" onclick="printCV()">Print</button>
+    </div> <!--closing of FormTemplate-->
+</body>   
 </html>
-
